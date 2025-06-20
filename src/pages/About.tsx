@@ -1,9 +1,19 @@
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 const About = () => {
+  const storyImages = [
+    "our-story-1-1.jpeg",
+    "our-story-3-2.jpeg",
+    "our-story-3-5.jpeg",
+    "our-story-1-4.jpeg",
+    "our-story-3-6.jpeg",
+  ];
+
   return (
     <div className="min-h-screen bg-houg-background">
       <Navbar />
@@ -283,6 +293,86 @@ const About = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Journey Section */}
+        <section className="mb-16">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8 text-houg-primary text-center">Our Journey</h2>
+            <ol className="relative border-l border-houg-primary">
+              <li className="mb-10 ml-6">
+                <span className="absolute w-4 h-4 bg-houg-primary rounded-full -left-2.5"></span>
+                <h3 className="text-lg font-semibold text-houg-secondary">2011 - Humble Beginnings</h3>
+                <p className="text-gray-700">Founded by three unemployed teachers in Kamuli to address youth unemployment through tree planting and training.</p>
+              </li>
+              <li className="mb-10 ml-6">
+                <span className="absolute w-4 h-4 bg-houg-primary rounded-full -left-2.5"></span>
+                <h3 className="text-lg font-semibold text-houg-secondary">2015 - Grassroots Expansion</h3>
+                <p className="text-gray-700">Expanded outreach to three districts and diversified activities to include beekeeping and green jobs training.</p>
+              </li>
+              <li className="mb-10 ml-6">
+                <span className="absolute w-4 h-4 bg-houg-primary rounded-full -left-2.5"></span>
+                <h3 className="text-lg font-semibold text-houg-secondary">2020 - COVID-19 Impact</h3>
+                <p className="text-gray-700">Over 5,000 trees lost to pandemic disruptions; rebuilt stronger with increased local nursery participation.</p>
+              </li>
+              <li className="mb-10 ml-6">
+                <span className="absolute w-4 h-4 bg-houg-primary rounded-full -left-2.5"></span>
+                <h3 className="text-lg font-semibold text-houg-secondary">2023 - Milestone Reached</h3>
+                <p className="text-gray-700">Over 150,000 trees distributed and 320+ youth reengaged in sustainable agriculture and entrepreneurship.</p>
+              </li>
+              <li className="ml-6">
+                <span className="absolute w-4 h-4 bg-houg-primary rounded-full -left-2.5"></span>
+                <h3 className="text-lg font-semibold text-houg-secondary">2030 & Beyond</h3>
+                <p className="text-gray-700">Targeting 19.7 million trees planted and 1 million green jobs created across Uganda by 2036.</p>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        {/* Photo Gallery Section */}
+        <section className="mb-16">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8 text-houg-primary text-center">Our Story in Pictures</h2>
+            <div className="px-4">
+              <Carousel
+                plugins={[
+                  Autoplay({
+                    delay: 3000,
+                  }),
+                ]}
+                className="w-full"
+              >
+                <CarouselContent>
+                  {storyImages.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <div className="p-1">
+                        <Dialog>
+                          <DialogTrigger>
+                            <div className="relative aspect-video overflow-hidden rounded-lg">
+                              <img
+                                src={`/lovable-uploads/${image}`}
+                                alt={`Our story ${index + 1}`}
+                                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                              />
+                            </div>
+                          </DialogTrigger>
+                          <DialogContent className="max-w-4xl p-0">
+                            <img
+                              src={`/lovable-uploads/${image}`}
+                              alt={`Our story ${index + 1}`}
+                              className="w-full h-full max-h-[80vh] object-contain"
+                            />
+                          </DialogContent>
+                        </Dialog>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-4" />
+                <CarouselNext className="right-4" />
+              </Carousel>
             </div>
           </div>
         </section>

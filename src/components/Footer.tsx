@@ -43,7 +43,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-2">
                 <Home size={18} />
-                <span>Wakiso District, Uganda</span>
+                <span>Kamuli District, Uganda</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={18} />
@@ -55,7 +55,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={18} />
-                <span>info@houuganda.org</span>
+                <span>houuganda@gmail.com</span>
               </li>
             </ul>
           </div>

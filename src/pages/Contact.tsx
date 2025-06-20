@@ -34,7 +34,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-medium text-lg mb-1">Visit Us</h4>
                     <p>Hands On Unemployment Uganda</p>
-                    <p>Wakiso District, Uganda</p>
+                    <p>Kamuli District, Uganda</p>
                   </div>
                 </div>
                 
@@ -44,8 +44,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-lg mb-1">Email Us</h4>
-                    <p>info@houuganda.org</p>
-                    <p>support@houuganda.org</p>
+                    <p>houuganda@gmail.com</p>
+                    
                   </div>
                 </div>
                 

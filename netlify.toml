@@ -1,6 +1,10 @@
 [build]
   functions = "netlify/functions"
-  publish = "dist" # or "build" depending on your React setup
+  publish = "build"
+
+[template.environment]
+  PAYPAL_CLIENT_ID = ""
+  PAYPAL_SECRET = ""
 
 [[redirects]]
   from = "/.netlify/functions/*"
