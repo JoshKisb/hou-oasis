@@ -194,7 +194,7 @@ const About = () => {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold mb-2 text-houg-secondary">Mr. Omar Abeid</h3>
-                    <p className="text-houg-primary font-semibold mb-4">Environmental Enthusiast</p>
+                    <p className="text-houg-primary font-semibold mb-4">PRO/Operations Manager</p>
                     <p className="text-gray-700 mb-4">
                       Mr. Omar Abeid, an environmental enthusiast, and a key figure in the success of Hou Uganda. With a diploma in computer sciences and extensive experience as an Environmental, Health, and Safety (EHS) personnel in Yemen's gas production industry, Omar brings a unique blend of technical expertise, environmental awareness, and strategic thinking to the organization.
                     </p>
